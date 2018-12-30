@@ -10,8 +10,6 @@ mysql_connection = pymysql.connect(host='localhost',
                                    charset='utf8mb4',
                                    cursorclass=pymysql.cursors.DictCursor)
 
-#nltk.download('stopwords')
-#nltk.download('wordnet')
 try:
     mongo_client = MongoClient('mongodb+srv://brie:brie1234@brie-mongo-cluster-m0oah.mongodb.net/Brie')
     mongo_brie_db = mongo_client.Brie
