@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 import pandas as pd
 
-mongo_client = MongoClient('mongodb://brie:brie1234@localhost:27017/Brie')
+mongo_client = MongoClient('mongodb+srv://brie:brie1234@brie-mongo-cluster-m0oah.mongodb.net/Brie')
 mongo_brie_db = mongo_client.Brie
 
 books_similar_collection = mongo_brie_db.Books_Similar
