@@ -1,26 +1,28 @@
 import pymysql
 from pymongo import MongoClient
 import pandas as pd
-from src.clean_text import give_clean_words_list
+from clean_text import give_clean_words_list
 
 mysql_connection = pymysql.connect(host='localhost',
-                                   user='root',
-                                   password='sethu123',
+                                   user='brie',
+                                   password='brie1234',
                                    db='Brie',
                                    charset='utf8mb4',
                                    cursorclass=pymysql.cursors.DictCursor)
 
+#nltk.download('stopwords')
+#nltk.download('wordnet')
 try:
-    mongo_client = MongoClient('mongodb://sethu:sethu123@localhost:27017/Brie')
+    mongo_client = MongoClient('mongodb://brie:brie1234@localhost:27017/Brie')
     mongo_brie_db = mongo_client.Brie
     with mysql_connection.cursor() as cursor:
         sql_query = '''select id from app_book'''
         cursor.execute(sql_query)
         result = cursor.fetchall()
 
-        books_desc = pd.read_csv("../../data/batch_1/description_four (1).csv", encoding="ISO-8859-1")
+        books_desc = pd.read_csv("../../data/batch_1/description_all.csv", encoding="ISO-8859-1")
         books = pd.read_csv("../../data/batch_1/books.csv", encoding="ISO-8859-1")
-        reviews_data = pd.read_csv("../../data/batch_1/reviews_users.csv", encoding="ISO-8859-1")
+       # reviews_data = pd.read_csv("../../data/batch_1/reviews_users.csv", encoding="ISO-8859-1")
         reviews_index = -1
 
         description_collection = mongo_brie_db.book_secondary_details
@@ -57,39 +59,39 @@ try:
                 riffle_desc = ""
                 doc["riffle"] = give_clean_words_list(riffle_desc)
             #
-            # amazon_desc = row["Amazon Description"]
-            # if type(amazon_desc) is float:
-            #     amazon_desc = ""
-            # doc["amazon"] = give_clean_words_list(amazon_desc)
+            amazon_desc = row["Amazon Description"]
+            if type(amazon_desc) is float:
+                amazon_desc = ""
+            doc["amazon"] = give_clean_words_list(amazon_desc)
 
             doc["amazon_url"] = row["Amazon URL"]
             doc["isbn"] = row["ISBN"]
 
             review_details_list = []
-            while True:
-                reviews_index += 1
-                try:
-                    review_isbn = reviews_data["ISBN"][reviews_index]
-                    review_book_title = reviews_data["Book Title"][reviews_index]
+            # while True:
+            #     reviews_index += 1
+            #     try:
+            #         review_isbn = reviews_data["ISBN"][reviews_index]
+            #         review_book_title = reviews_data["Book Title"][reviews_index]
 
-                except KeyError:
-                    break
+            #     except KeyError:
+            #         break
 
-                if review_book_title == book_title or review_isbn == book_isbn:
-                    review_obj = dict()
-                    review_obj["user_id"] = reviews_data["User ID"][reviews_index]
-                    review_obj["user_id"] = reviews_data["User Name"][reviews_index]
-                    review_obj["user_url"] = reviews_data["User URL"][reviews_index]
-                    review_obj["date"] = reviews_data["Review Date"][reviews_index]
-                    review_text = reviews_data["Review"][reviews_index]
-                    if type(review_text) is float:
-                        review_text = ""
-                        review_obj["review"] = give_clean_words_list(review_text)
-                        review_details_list.append(review_obj)
+            #     if review_book_title == book_title or review_isbn == book_isbn:
+            #         review_obj = dict()
+            #         review_obj["user_id"] = reviews_data["User ID"][reviews_index]
+            #         review_obj["user_id"] = reviews_data["User Name"][reviews_index]
+            #         review_obj["user_url"] = reviews_data["User URL"][reviews_index]
+            #         review_obj["date"] = reviews_data["Review Date"][reviews_index]
+            #         review_text = reviews_data["Review"][reviews_index]
+            #         if type(review_text) is float:
+            #             review_text = ""
+            #             review_obj["review"] = give_clean_words_list(review_text)
+            #             review_details_list.append(review_obj)
 
-                else:
-                    reviews_index -= 1
-                    break
+            #     else:
+            #         reviews_index -= 1
+            #         break
             doc["reviews"] = review_details_list
             print("Comments = " + str(len(review_details_list)))
             description_collection.insert_one(doc)

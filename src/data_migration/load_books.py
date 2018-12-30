@@ -4,8 +4,8 @@ import calendar
 import re
 
 connection = pymysql.connect(host='localhost',
-                             user='root',
-                             password='sethu123',
+                             user='brie',
+                             password='brie1234',
                              db='Brie',
                              charset='utf8mb4',
                              cursorclass=pymysql.cursors.DictCursor)
@@ -17,7 +17,7 @@ try:
         `r1`, `r2`, `r3`, `r4`, `r5`) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, 
         %s, %s)'''
         books_data = pd.read_csv("../../data/batch_1/books.csv")
-        img_price_data = pd.read_csv("../../data/batch_1/image_and_price (1).csv")
+        img_price_data = pd.read_csv("../../data/batch_1/image_and_price.csv")
         month_dict = {v: k for k, v in enumerate(calendar.month_abbr)}
         for index, row in books_data.iterrows():
             title = row["Book Title"]
@@ -82,8 +82,11 @@ try:
             r4 = ""
             r5 = ""
 
-            cursor.execute(sql, (title, isbn, author, language, pages, publication, pub_date, pub_month, pub_year, url,
+            try:
+                cursor.execute(sql, (title, isbn, author, language, pages, publication, pub_date, pub_month, pub_year, url,
                                  img_url, gp_price, bnb_price, indie_price, amazon_price, r1, r2, r3, r4, r5))
+            except:
+                print("exception")
             connection.commit()
 
 finally:

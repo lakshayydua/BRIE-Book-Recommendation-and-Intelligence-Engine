@@ -11,7 +11,7 @@ def give_text_format(text):
         new_list.append(word.replace("'", '').strip())
     return new_list
 
-mongo_client = MongoClient('mongodb://sethu:sethu123@localhost:27017/Brie')
+mongo_client = MongoClient('mongodb://brie:brie1234@localhost:27017/Brie')
 mongo_brie_db = mongo_client.Brie
 
 books_collection = mongo_brie_db.Books
