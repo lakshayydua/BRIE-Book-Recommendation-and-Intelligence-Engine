@@ -8,8 +8,8 @@ import numpy as np
 import pymysql
 
 mysql_connection = pymysql.connect(host='localhost',
-                                   user='root',
-                                   password='sethu123',
+                                   user='brie',
+                                   password='brie1234',
                                    db='Brie',
                                    charset='utf8mb4',
                                    cursorclass=pymysql.cursors.DictCursor)

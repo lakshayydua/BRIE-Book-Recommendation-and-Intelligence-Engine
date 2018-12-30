@@ -21,4 +21,7 @@ Folder Brie - The entire Django Web Framework
 
 **Instruction to Set-up Pipeline**  
   
-- Main python script to load data to mongoDB - src/data_migration/final_data_migrate.py
+- Main python script to load data to mongoDB  
+	- src/data_migration/final_data_migrate.py (book)  
+	- src/data_migration/load_sim_books.py (book_similar)  
+	- src/data_migration/load_goodreads_desc.py (book_goodreads_desc)  
