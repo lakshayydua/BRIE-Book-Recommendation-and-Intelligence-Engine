@@ -80,13 +80,14 @@ WSGI_APPLICATION = 'Brie.wsgi.application'
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+#mysql -u brie -pbrie1234
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'mysql.connector.django',
         'NAME': 'Brie',
-        'USER': 'root',
-        'PASSWORD': 'sethu123',
+        'USER': 'brie',
+        'PASSWORD': 'brie1234',
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
