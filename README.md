@@ -25,3 +25,7 @@ Folder Brie - The entire Django Web Framework
 	- src/data_migration/final_data_migrate.py (book)  
 	- src/data_migration/load_sim_books.py (book_similar)  
 	- src/data_migration/load_goodreads_desc.py (book_goodreads_desc)  
+
+- MongoDB Hosting
+	- local : mongodb://brie:brie1234@localhost:27017/Brie
+	- mongoDB Atlas Cloud with AWS : mongodb+srv://brie:brie1234@brie-mongo-cluster-m0oah.mongodb.net/Brie
