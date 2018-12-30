@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'Brie.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mysql.connector.django',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Brie',
         'USER': 'brie',
         'PASSWORD': 'brie1234',
