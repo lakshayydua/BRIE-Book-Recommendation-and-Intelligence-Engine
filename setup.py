@@ -52,15 +52,6 @@ setup(
                         'nltk'
                         ],  # Optional
 
-pip3 install 
-pip3 install plotly
-pip3 install numpy
-pip3 install pandas
-pip3 install nltk
-nltk.download('averaged_perceptron_tagger')
-nltk.download('maxent_ne_chunker')
-nltk.download('words')
-
 
     # To export all data files (non .py files) inside utils directory.
     # Since utils contains __init__.py, a utils package directory will be created inside /usr/local/lib/python2.7
