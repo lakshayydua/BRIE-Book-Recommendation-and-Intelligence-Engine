@@ -45,6 +45,10 @@ setup(
                         'pymysql',
                         'pymongo',
                         'mysqlclient',
+                        'plotly',
+                        'numpy',
+                        'pandas',
+                        'nltk'
                         ],  # Optional
 
 
