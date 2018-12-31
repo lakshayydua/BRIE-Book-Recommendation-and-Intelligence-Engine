@@ -31,3 +31,4 @@ Folder Brie - The entire Django Web Framework
 	- mongoDB Atlas Cloud with AWS : mongodb+srv://brie:brie1234@brie-mongo-cluster-m0oah.mongodb.net/Briew
 
 - Added import pymysql ; pymysql.install_as_MySQLdb() to Brie/Brie/__init__.py to resolve mysqlclient install issue
+	- source: https://stackoverflow.com/questions/46902357/error-loading-mysqldb-module-did-you-install-mysqlclient-or-mysql-python
