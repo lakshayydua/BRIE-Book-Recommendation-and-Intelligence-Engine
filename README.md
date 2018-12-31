@@ -42,6 +42,7 @@ Folder Brie - The entire Django Web Framework
 - To custom execute shell commands in build use : heroku buildpacks:add https://github.com/lakshayydua/heroku-buildpack-run
 	- Further instuction are present in the above URL
 	- This app uses heroku's official buildpack : heroku buildpacks:add heroku/python
+	- To clear all buildpacks : heroku buildpacks:clear
 
 - App uses : heroku config:set DISABLE_COLLECTSTATIC=1
 	- This is done to avoid the following error : Error while running '$ python Brie/manage.py collectstatic --noinput'

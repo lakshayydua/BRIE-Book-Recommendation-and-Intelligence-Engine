@@ -51,7 +51,6 @@ setup(
                         'pillow',
                         'nltk',
                         'gunicorn',
-                        ''
                         ],  # Optional
 
 
