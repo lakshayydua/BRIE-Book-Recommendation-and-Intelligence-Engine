@@ -1,0 +1,10 @@
+setuptools
+django
+pymysql
+mysqlclient
+plotly
+numpy
+pandas
+pillow
+nltk
+gunicorn
