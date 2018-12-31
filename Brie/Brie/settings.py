@@ -82,16 +82,16 @@ WSGI_APPLICATION = 'Brie.wsgi.application'
 # }
 #mysql -u brie -pbrie1234
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Brie',
-        'USER': 'brie',
-        'PASSWORD': 'brie1234',
-        'HOST': 'brie.cuwfzyk0xyqg.us-east-2.rds.amazonaws.com',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'Brie',
+#         'USER': 'brie',
+#         'PASSWORD': 'brie1234',
+#         'HOST': 'brie.cuwfzyk0xyqg.us-east-2.rds.amazonaws.com',   # Or an IP Address that your DB is hosted on
+#         'PORT': '3306',
+#     }
+# }
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
 
