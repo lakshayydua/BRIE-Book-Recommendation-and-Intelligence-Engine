@@ -34,7 +34,7 @@ setup(
                         'django',
                         'pymysql',
                         #'pymongo[tls,srv]',
-                        'mysqlclient',
+                        #'mysqlclient',
                         'plotly',
                         'numpy',
                         'pandas',
