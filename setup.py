@@ -48,7 +48,8 @@ setup(
                         'plotly',
                         'numpy',
                         'pandas',
-                        'nltk'
+                        'pillow',
+                        'nltk',
                         ],  # Optional
 
 
