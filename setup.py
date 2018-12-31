@@ -42,7 +42,9 @@ setup(
 
     install_requires = ['setuptools',
                         'django',
-                        'pymsql'
+                        'pymysql',
+                        'django pymongo',
+                        'django mysqlclient',
                         ],  # Optional
 
 
