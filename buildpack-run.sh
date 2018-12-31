@@ -1,6 +1,8 @@
 # This is buildpack-run.sh
 echo "Hello World"
 python3 --version
-sudo apt-get install python3.6
+apt-get install python3.6
 pip3 --version
-sudo apt-get install python3-pip
+apt-get install python3-pip
+python3 --version
+pip3 --version
