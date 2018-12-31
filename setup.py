@@ -33,7 +33,7 @@ setup(
     install_requires = ['setuptools',
                         'django',
                         'pymysql',
-                        'pymongo[tls,srv]',
+                        #'pymongo[tls,srv]',
                         'mysqlclient',
                         'plotly',
                         'numpy',
