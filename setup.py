@@ -43,13 +43,14 @@ setup(
     install_requires = ['setuptools',
                         'django',
                         'pymysql',
-                        'pymongo',
+                        'pymongo[tls,srv]',
                         'mysqlclient',
                         'plotly',
                         'numpy',
                         'pandas',
                         'pillow',
                         'nltk',
+                        ''
                         ],  # Optional
 
 
