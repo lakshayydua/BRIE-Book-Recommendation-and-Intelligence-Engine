@@ -1,4 +1,4 @@
 # This is buildpack-run.sh
 echo "Hello World"
 
-apt-get install libmysqlclient-dev
+cd Brie ; pwd ; python3 manage.py runserver
