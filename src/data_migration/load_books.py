@@ -3,7 +3,7 @@ import pandas as pd
 import calendar
 import re
 
-connection = pymysql.connect(host='localhost',
+connection = pymysql.connect(host='brie.cuwfzyk0xyqg.us-east-2.rds.amazonaws.com',
                              user='brie',
                              password='brie1234',
                              db='Brie',

@@ -7,7 +7,7 @@ from pyspark.sql import SQLContext
 import numpy as np
 import pymysql
 
-mysql_connection = pymysql.connect(host='localhost',
+mysql_connection = pymysql.connect(host='brie.cuwfzyk0xyqg.us-east-2.rds.amazonaws.com',
                                    user='brie',
                                    password='brie1234',
                                    db='Brie',

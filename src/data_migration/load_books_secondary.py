@@ -3,7 +3,7 @@ from pymongo import MongoClient
 import pandas as pd
 from clean_text import give_clean_words_list
 
-mysql_connection = pymysql.connect(host='localhost',
+mysql_connection = pymysql.connect(host='brie.cuwfzyk0xyqg.us-east-2.rds.amazonaws.com',
                                    user='brie',
                                    password='brie1234',
                                    db='Brie',

@@ -34,6 +34,7 @@ Folder Brie - The entire Django Web Framework
 	- cd project_dir 
 	- git add . ; git commit -am "heroku" ; git push heroku master
 	- check errors if any and make changes then again run the above command
+	- heroku run python manage.py migrate - finally after changes are in place
 
 - Added import pymysql ; pymysql.install_as_MySQLdb() to Brie/Brie/__init__.py to resolve mysqlclient install issue
 	- source: https://stackoverflow.com/questions/46902357/error-loading-mysqldb-module-did-you-install-mysqlclient-or-mysql-python
