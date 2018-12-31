@@ -50,6 +50,7 @@ setup(
                         'pandas',
                         'pillow',
                         'nltk',
+                        'gunicorn',
                         ''
                         ],  # Optional
 
