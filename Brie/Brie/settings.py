@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 from django.apps import AppConfig
+
 #   from Brie.app.apps import AppConfig
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -95,6 +96,17 @@ os.environ.setdefault("WSGI_APPLICATION", "Brie.Brie.wsgi.application")
 #         'PORT': '3306',
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'defjkhl67jf1vd',
+        'USER': 'buvtrxtrnlslir',
+        'PASSWORD': '6fc8b09bca429ca89fb83510e27b9077a23e47c485d5634044642a9fd0e2e040',
+        'HOST': 'ec2-54-235-178-189.compute-1.amazonaws.com',   # Or an IP Address that your DB is hosted on
+        'PORT': '5432',
+    }
+}
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
 
