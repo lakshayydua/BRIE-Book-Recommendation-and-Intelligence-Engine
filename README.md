@@ -51,4 +51,8 @@ Folder Brie - The entire Django Web Framework
 	- To include static files
 
 - App uses : heroku ps:scale web=1 --app brie
-	- 
+
+- Steps to deploy to heroku
+	- git add . ; git commit -am "Debugging" ;  git push heroku master
+	- heroku run "python3 manage.py collectstatic --noinput"
+	- heroku run "python3 manage.py runserver"
