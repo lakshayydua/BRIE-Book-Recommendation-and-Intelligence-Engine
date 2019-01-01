@@ -1,1 +1,1 @@
-default_app_config = 'brie.app.apps.AppConfig'
+default_app_config = 'app.apps.AppConfig'
