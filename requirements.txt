@@ -9,3 +9,4 @@ pillow
 nltk
 gunicorn
 pymongo[tls,srv]
+whitenoise

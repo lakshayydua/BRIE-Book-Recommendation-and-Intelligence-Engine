@@ -47,5 +47,8 @@ Folder Brie - The entire Django Web Framework
 - App uses : heroku config:set DISABLE_COLLECTSTATIC=1
 	- This is done to avoid the following error : Error while running '$ python Brie/manage.py collectstatic --noinput'
 
+- App uses : heroku config:set DEBUG_COLLECTSTATIC=1
+	- To include static files
+
 - App uses : heroku ps:scale web=1 --app brie
 	- 
