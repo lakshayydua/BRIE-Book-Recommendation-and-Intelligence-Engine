@@ -68,7 +68,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Brie.Brie.wsgi.application'
+#WSGI_APPLICATION = 'Brie.wsgi.application'
+os.environ.setdefault("WSGI_APPLICATION", "Brie.Brie.wsgi.application")
 
 
 # Database
