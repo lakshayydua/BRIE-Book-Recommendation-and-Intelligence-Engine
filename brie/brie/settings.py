@@ -53,7 +53,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Brie.urls'
+ROOT_URLCONF = 'brie.urls'
 
 TEMPLATES = [
     {
@@ -72,7 +72,7 @@ TEMPLATES = [
 ]
 
 #WSGI_APPLICATION = 'Brie.wsgi.application'
-os.environ.setdefault("WSGI_APPLICATION", "Brie.Brie.wsgi.application")
+os.environ.setdefault("WSGI_APPLICATION", "brie.brie.wsgi.application")
 
 
 # Database

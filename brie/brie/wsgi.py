@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Brie.Brie.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "brie.brie.settings")
 
 application = get_wsgi_application()
