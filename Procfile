@@ -1,1 +1,1 @@
-web: gunicorn brie.wsgi
+web: gunicorn Brie.Brie.wsgi
