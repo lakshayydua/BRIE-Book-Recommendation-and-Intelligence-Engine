@@ -1,4 +1,6 @@
 **Book Recommendation and Intelligence Engine (B.R.I.E.)**
+
+https://brie.herokuapp.com/brie/
      
 This text file contains a general overview of BRIE's codebase denoting which parts of the codebase contain what functionalities  
     
